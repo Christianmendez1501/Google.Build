@@ -1,4 +1,4 @@
-# Bienvenido a mi Aplicación de Formulario con Despliegue Automático y Canalización de Datos
+# Aplicación de Formulario con Despliegue Automático y centralizacion de datos
 
 Este emocionante proyecto se divide en dos partes clave:
 

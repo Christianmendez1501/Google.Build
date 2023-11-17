@@ -1,0 +1,15 @@
+
+steps:
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+    - functions
+    - deploy
+    - functionprueba
+    - --region=europe-west1
+    - --runtime
+    - python39
+    - --trigger-bucket
+    - gs://proyecto-gcp-christian1328
+    - --source=./app
+    - --allow-unauthenticated
+
