@@ -1,7 +1,7 @@
-# Descripcion de archivos relacionados a la funcion.
+# Descripción de Archivos Relacionados a la Función
 
-1- Dentro de esta carpeta tenemos 2 archivos màs que son parte de nuestro deploy de la funcion, el main.py y requirements.txt
+En esta carpeta, encontramos dos archivos esenciales para implementar nuestra función:
 
-2- El main.py es el codigo de nuestra funcion,es decir la tarea que queremos que realice nuestra funcion.
+1. **main.py:** Este archivo contiene el código de nuestra función. Aquí definimos la tarea específica que queremos que la función realice.
 
-3- El archivo requirements.txt son las librerias necesarias para que la funcion pueda interactuar correctamente con los servicos que vamos a usar de gcloud.
+2. **requirements.txt:** Este archivo lista las librerías necesarias para que la función pueda interactuar de manera efectiva con los servicios de Google Cloud que estamos utilizando en nuestro deploy.
