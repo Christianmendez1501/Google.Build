@@ -42,7 +42,7 @@ def index():
             time.sleep(0)
             return redirect(url_for('index'))
         except Exception as e:
-            print(f"Error al guardar en Firestore o GCS: {e}")
+            print(f"Error a guardar en Firestore o GCS: {e}")
 
     return render_template('index.html')
 
