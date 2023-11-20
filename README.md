@@ -20,12 +20,17 @@ Este emocionante proyecto se divide en dos partes clave:
    - Crea un bucket en Cloud Storage.
    - Establece tu entidad o tabla en Firestore/Datastore.
 
+![Gcloud](img/bucket.png)
+
+![Gcloud](img/firestore.png)
 2. **Despliegue de Cloud Function:**
    - Utiliza `cloudbuild_function.yml` para describir el entorno, la carpeta asociada a la función, el activador y la región.
 
 3. **Despliegue de Cloud Run:**
    - Emplea `cloudbuild_run.yml` para configurar el despliegue de Cloud Run.
    - El archivo realiza la configuración del entorno, crea la imagen desde la carpeta asociada (cloud_run), la sube al repositorio de Google Cloud y finalmente la despliega según las especificaciones.
+
+![Gcloud](img/run.png)
 
 4. **Documentación Detallada:**
    - En cada carpeta, encontrarás un ReadMe que proporciona información detallada sobre esa parte específica del proceso.
