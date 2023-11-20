@@ -1,5 +1,7 @@
 # Descripción de Archivos Relacionados a la Función
 
+![Gcloud](img/function.png)
+
 En esta carpeta, encontramos dos archivos esenciales para implementar nuestra función:
 
 1. **main.py:** Este archivo contiene el código de nuestra función. Aquí definimos la tarea específica que queremos que la función realice.
