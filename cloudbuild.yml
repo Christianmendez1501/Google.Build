@@ -17,7 +17,7 @@ steps:
         - run
         - deploy
         - myservice
-        - --image=gcr.io/bootcamp-thebridgecloud/app_uwee
+        - --image=gcr.io/optimum-rock-404123/app
         - --region=europe-west1
         - --platform=managed
         - --allow-unauthenticated
