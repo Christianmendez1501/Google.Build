@@ -1,0 +1,24 @@
+steps:
+  # Configura el entorno
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['config', 'set', 'project', 'optimum-rock-404123']
+
+  # Construye la imagen del contenedor
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/optimum-rock-404123/app', './cloud_run']
+
+  # Sube la imagen al Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/optimum-rock-404123/app']
+
+  # Implementa la imagen en Cloud Run
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+        - run
+        - deploy
+        - myservice
+        - --image=gcr.io/bootcamp-thebridgecloud/app_uwee
+        - --region=europe-west1
+        - --platform=managed
+        - --allow-unauthenticated
+        - --port=5000

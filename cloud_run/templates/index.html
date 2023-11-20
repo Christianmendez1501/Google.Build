@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario GCP</title>
+    <style>
+        body {
+            background-color: #1f1f1f;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1, h2 {
+            color: #61dafb;
+            text-align: center;
+        }
+
+        form {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+            max-width: 400px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #61dafb;
+        }
+
+        input {
+            width: calc(100% - 16px);
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #777;
+            border-radius: 4px;
+            background-color: #444;
+            color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="submit"] {
+            background-color: #61dafb;
+            color: #121212;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="submit"]:hover {
+            background-color: #4fa3d1;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            background-color: #61dafb;
+            color: #121212;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #4fa3d1;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>¡Regístrate gratis!</h1>
+    <form id="registrationForm" action="/" method="post">
+        <!-- No se necesita el campo ID, Firestore lo generará automáticamente -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="fecha">Fecha de registro:</label>
+        <input type="text" id="fecha" name="fecha" readonly>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <button onclick="window.location.href='/consulta'">Consultar Datos</button>
+
+    <script>
+        document.getElementById('nombre').addEventListener('input', function() {
+            var currentDate = new Date();
+            var formattedDate = currentDate.toISOString().split('T')[0];
+            document.getElementById('fecha').value = formattedDate;
+        });
+    </script>
+</body>
+</html>
+
