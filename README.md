@@ -1,3 +1,5 @@
+![Gcloud](img/1.png)
+
 # Aplicación de Formulario con Despliegue Automático y centralizacion de datos
 
 Este emocionante proyecto se divide en dos partes clave:
