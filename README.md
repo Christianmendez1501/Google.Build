@@ -1,6 +1,6 @@
 ![Gcloud](img/1.png)
 
-# Aplicación de Formulario con Despliegue Automático y centralizacion de datos
+# Aplicación de Formulario con Despliegue Automático y centralizacion de datos a traves del servicio de Google Cloud Platform
 
 Este emocionante proyecto se divide en dos partes clave:
 
