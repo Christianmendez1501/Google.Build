@@ -52,7 +52,7 @@ def consulta():
     users = [user.to_dict() for user in users]
 
     return render_template('consulta.html', users=users)
-
+ 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
 
