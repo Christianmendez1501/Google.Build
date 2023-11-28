@@ -8,6 +8,8 @@ from datetime import datetime
 
 app = Flask(__name__)
 
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/app/app/application_default_credenciales.JSON"
+
 storage_client = storage.Client()
 bucket_name = 'proyecto-gcp-christian1328'
 
