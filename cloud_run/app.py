@@ -5,7 +5,7 @@ import json
 import time
 
 app = Flask(__name__)
-#H
+#
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/app/app/application_default_credenciales.JSON"
 
 storage_client = storage.Client()
