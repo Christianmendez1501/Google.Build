@@ -11,60 +11,34 @@
             }
         }
     </script>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden; /* Para evitar que aparezca una barra de desplazamiento */
-            color: white; /* Color del texto */
-            font-family: Arial, sans-serif;
-        }
-
-        #page-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1; /* Asegura que el contenido de Dash esté sobre la nube de Three.js */
-            text-align: center;
-        }
-
-        canvas {
-            display: block;
-        }
-
-        .btn-formulario,
-        .btn-tabla-usuarios {
-            background-color: black;
-            color: white;
-            border: none;
-            margin: 10px;
-            box-shadow: 2px 2px 5px 0px #000000;
-            animation: falling 2s infinite;
-        }
-
-        #page-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1; /* Asegura que el contenido de Dash esté sobre la nube de Three.js */
-            text-align: center;
-        }
-    </style>
-    <title>Tu Aplicación Web</title>
+    <title>Aplicación Web de Christian</title>
 </head>
-<body>
+<body style="margin: 0; overflow: hidden;">
 
-<!-- Contenido de Dash -->
-<div id="page-content">
-    <h1>¡Registrate en mi Formulario de Cloud!</h1>
-    <!-- Agrega aquí el contenido de Dash según tu diseño -->
-    <a class="btn-formulario" href="/formulario">Formulario de Usuarios</a>
-    <a class="btn-tabla-usuarios" href="/tabla_usuarios">Tabla de Usuarios</a>
+<!-- Contenido del formulario -->
+<div id="content" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white;">
+    <h1>Registrate</h1>
+    
+    <!-- Agregar sección para mostrar el mensaje -->
+    {% if mensaje %}
+        <p>{{ mensaje }}</p>
+    {% endif %}
+
+    <form method="post">
+        <input type="text" name="nombre" placeholder="Nombre" style="margin-bottom: 10px; background-color: #00000000; color: #fff">
+        <input type="email" name="email" placeholder="Email" style="margin-bottom: 10px; background-color: #00000000; color: #fff">
+        <button type="submit" style="background-color: #000; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Enviar</button>
+    </form>
+
+    <!-- Agregar botón para ir a la tabla de usuarios -->
+    <a class="btn-formulario" href="/tabla_usuarios" style="background-color: #ffffff00; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin: 10px; box-shadow: 2px 2px 5px 0px #000000; animation: falling 2s infinite;">
+        Explora la tabla de Usuarios &#10148;
+      </a>
+      
 </div>
 
-<!-- Código de Three.js -->
-<<script type="module">
+<!-- Script para la animación con Three.js -->
+<script type="module">
     import * as THREE from 'three';
 
     // init
