@@ -32,7 +32,22 @@ Este emocionante proyecto se divide en dos partes clave:
 
 ![Gcloud](img/run.png)
 
+5. **EL resultado de la arquitectura graficamente quedaria en los siguientes pasos:**
+
+Comenzamos con lo simple
+![Gcloud](img/1.0.png)
+
+Agregamos la interfaz del usuario
+![Gcloud](img/2.0.png)
+
+Creamos el despliegue continuo
+![Gcloud](img/3.0.png)
+
+Finalmente la infraestructura terminada
+![Gcloud](img/4.0.png)
+
 4. **Documentación Detallada:**
    - En cada carpeta, encontrarás un ReadMe que proporciona información detallada sobre esa parte específica del proceso.
 
 ¡Espero que esta guía te sea de gran ayuda en tu aventura con la implementación y despliegue de la aplicación!
+
