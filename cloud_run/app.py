@@ -10,7 +10,7 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/app/app/application_default_cre
 
 storage_client = storage.Client()
 bucket_name = 'proyecto-gcp-christian1328'
-
+#
 db = firestore.Client()
 collection_name = 'thebridge'
 
